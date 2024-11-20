@@ -1,0 +1,120 @@
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>AI Searcher - Mi perfil</title>
+            <link rel="icon" href="/images/logo2.png" type="image/png">
+            <link rel="stylesheet" href="css/styles.css">
+            <script src="js/main.js" defer></script>
+            <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        </head>
+        <body>
+            <!-- Sidebar Navigation -->
+            <div class="sidebar">  
+                <h2 class="site-title fade-in">A! Searcher</h2>
+                <div>
+                    <img src="/images/logo2.png" alt="AI Searcher Logo" class="logo">
+                </div>
+                <ul>
+                    <li style="--order: 1;"><a href="/">Inicio</a></li>
+                    <li style="--order: 2;"><a href="login.html">Login</a></li>
+                    <li style="--order: 3;"><a href="register.html">Registro</a></li>
+                    <li style="--order: 4;"><a href="profile.html">Perfil</a></li>
+                </ul>
+                            <!-- Nuevo contenedor para mostrar el nombre y la hora de inicio de sesión -->
+            <div id="user-info" class="user-info fade-in">
+                <!-- Aquí se insertará el nombre y la hora de inicio de sesión -->
+            </div>
+            </div>
+            <!-- Main Content Layout -->
+            <div class="main-layout">
+                <!-- Column 1: Título y buscador -->
+                <div class="search-section">
+                    <div class="main-content">
+                        <!-- <h1 class="fade-in">Perfil de usuario</h1> -->
+                        <!-- <p class="fade-in">Bienvenido a tu perfil. Aquí podrás actualizar tu información.</p> -->
+                        <!-- <div id="user-profile" class="user-profile"></div> Contenedor para los datos del usuario -->
+                    </div>
+                    
+                    <!-- Filtro de categoría -->
+                    <div class="filters">
+                        <select id="category-filter">
+                            <option value="">Filtrar por categoría</option>
+                            <option value="Chatbots">Chatbots</option>
+                            <option value="Generación de Imágenes">Generación de Imágenes</option>
+                            <option value="Creación de Videos">Creación de Videos</option>
+                            <option value="Asistentes de Búsqueda">Asistentes de Búsqueda</option>
+                            <option value="Asistentes de Reuniones">Asistentes de Reuniones</option>
+                            <option value="NLP">NLP</option>
+                            <option value="SEO">SEO</option>
+                            <option value="Automatización">Automatización</option>
+                            <option value="Síntesis de Voz">Síntesis de Voz</option>
+                            <option value="Asistentes de Escritura">Asistentes de Escritura</option>
+                            <option value="Edición de Video">Edición de Video</option>
+                            <option value="Edición de Audio y Video">Edición de Audio y Video</option>
+                            <option value="Traducción">Traducción</option>
+                            <option value="Productividad">Productividad</option>
+                            <option value="Presentaciones">Presentaciones</option>
+                            <option value="Juegos">Juegos</option>
+                            <option value="Generación de Música">Generación de Música</option>
+                            <option value="Machine Learning">Machine Learning</option>
+                            <option value="Diseño Gráfico">Diseño Gráfico</option>
+                            <option value="Generación de Logos">Generación de Logos</option>
+                            <option value="Creatividad">Creatividad</option>
+                        </select>
+
+                        <select id="price-filter">
+                            <option value="">Filtrar por precio</option>
+                            <option value="0-9.99">Hasta $9.99</option>
+                            <option value="10.00-14.99">$10.00 - $14.99</option>
+                            <option value="15.00-19.99">$15.00 - $19.99</option>
+                            <option value="20.00-24.99">$20.00 - $24.99</option>
+                            <option value="25.00-29.95">$25.00 - $29.95</option>
+                        </select>
+                        
+                    </div>
+                    
+                    <input type="text" id="search-input" placeholder="Buscar herramientas..." />
+                    <button id="search-btn">Buscar</button>
+                    
+                    <div id="results" class="results-container">
+                        <!-- Aquí se insertarán los resultados de la búsqueda -->
+                    </div>
+                </div>
+                <!-- Estructura del recuadro flotante -->
+                <div id="popup-overlay" class="popup-overlay"></div>
+                <div id="details-popup" class="details-popup"></div>
+                <!-- Column 2: Carrusel de últimas búsquedas -->
+                <div class="carousel-section">
+                    <h2>TOP IA's Recomendadas:</h2>
+                    <div id="search-carousel" class="carousel">
+                        <!-- Aquí se insertarán las últimas búsquedas -->
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Footer -->
+            <footer class="footer fade-in">
+                <div class="container">
+                    <p class='fade-in'>Encuéntranos en nuestras redes sociales:</p>
+                    <div class="social-links">
+                        <a class='fade-in' href="https://www.facebook.com" target="_blank">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a> |
+                        <a class='fade-in' href="https://www.twitter.com" target="_blank">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </a> |
+                        <a class='fade-in' href="https://www.instagram.com" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a> |
+                        <a class='fade-in' href="https://www.linkedin.com" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                    <p>&copy; 2024 A! Searcher. Todos los derechos reservados.</p>
+                </div>
+            </footer>
+        </body>
+    </html>

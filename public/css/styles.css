@@ -1,0 +1,610 @@
+body {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #1a1a2e;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    color: white;
+    /* height: 100vh;  */
+}
+.sidebar {
+    width: 250px;
+    background-color: #1c1c29;
+    text-align: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+}
+
+.sidebar h2 {
+    color: #f8f8f2;
+    font-weight: 500;
+    font-size: 2.0em; 
+    text-align: center;
+    font-size: bold;
+    margin-bottom: 30px; 
+    animation: fade-slide-down 1.0s ease-in-out;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #8be9fd;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: block;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #00a2ff;
+    transform: scale(1.10); 
+}
+
+.main-content {
+    max-width: 800px; /* Limita el ancho del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 20px; /* Agrega un poco de espacio interno */
+}
+
+.main-content_register {
+    text-align: center;
+    padding: 2px;
+    flex: 1;
+}
+
+
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+/* Estilos para el contenedor del logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Espaciado alrededor */
+    background-color: #333; /* Color de fondo */
+    color: white; /* Color del texto */
+}
+
+/* Estilos para el logo */
+.logo {
+    height: 50px; /* Ajusta la altura del logo */
+    margin-right: 10px; /* Espaciado a la derecha */
+}
+
+/* Estilos para el título */
+.title {
+    font-size: 24px; /* Ajusta el tamaño del texto */
+    margin: 0; /* Elimina el margen */
+}
+
+/* Animación al pasar el cursor */
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.10); /* Hace que el botón se agrande ligeramente */
+}
+
+.search-button, button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    background-color: #6272a4;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.search-button:hover, button:hover {
+    background-color: #0056b3;
+    transform: scale(1.01); /* Hace que el botón se agrande ligeramente */
+}
+
+input[type="text"], input[type="password"], input[type="email"],input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #282a36;
+    border: 1px solid #13141a;
+    color: white;
+    box-sizing: border-box;
+    margin: 10px 0;
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #1c1e21;
+    color: white;
+    padding: 0px 0;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.footer .social-links a {
+    color: #61dafb;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer .social-links a:hover {
+    color: #ffffff;
+}
+
+.footer .social-links i {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+/* Aumentar ligeramente el tamaño de los iconos */
+.footer .social-links i {
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+
+
+
+@keyframes fade-slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Comienza ligeramente por encima */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Termina en su posición original */
+    }
+}
+
+@keyframes fade-slide-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px); /* Empieza ligeramente hacia la izquierda */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Termina en su posición original */
+    }
+}
+
+.sidebar ul li {
+    animation: fade-slide-right 1s ease forwards; /* Aplicamos la animación */
+    animation-delay: calc(0.2s * var(--order)); /* Retraso dinámico por elemento */
+    opacity: 0; /* Inicia invisible */
+}
+
+
+/* Logotipo */
+.logo {
+    max-width: 80px; /* Ajusta el tamaño del logo */
+    height: auto;
+    filter: brightness(1.3); 
+    transition: transform 0.3s ease; /* Añade una pequeña animación */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Hace que el logo crezca ligeramente al pasar el cursor */
+}
+
+input, button {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #008cba;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+    
+.input-group {
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+input {
+    padding-left: 40px;
+    background-color: #0c0c0c;
+    color: #fff;
+}
+
+input:focus {
+    outline: none;
+    background-color: #87c5da;
+    transition: background-color 0.3s ease-in-out;
+    color: #0c0c0c;
+}
+
+small {
+    color: #f44336;
+    visibility: hidden;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+.error input {
+    border: 2px solid #f44336;
+}
+
+.error small {
+    visibility: visible;
+}
+
+/* Layout de tres columnas */
+.main-layout {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.search-section {
+    flex: 2;
+    padding-right: 20px;
+}
+
+.carousel-section {
+    flex: 1;
+    background-color: #282a36;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel-section h2 {
+    text-align: center;
+    color: #8be9fd;
+}
+
+/* Estilo del contenedor del carrusel */
+.carousel {
+    width: 100%; /* Ajusta el ancho del carrusel */
+    height: 20px; /* Altura visible del carrusel */
+    overflow: hidden; /* Ocultar contenido fuera del área visible */
+    position: relative;
+    margin-top: 10px;
+    border-radius: 8px; /* Opcional: esquinas redondeadas */
+
+}
+
+/* Estilo de los ítems del carrusel */
+.carousel-item {
+    background-color: #6272a4;
+    padding: 10px;
+    margin: 5px 0;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    opacity: 0; /* Inicia invisible para la animación */
+    transform: translateY(10px); /* Desplazamiento hacia abajo */
+}
+
+/* Estilos para animación del carrusel (opcional) */
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para controlar el desplazamiento dinámico */
+#search-carousel {
+    display: block;
+    overflow-y: hidden;
+    height: 100%;
+    position: relative;
+}
+.carousel-item:nth-child(even) {
+    background-color: #7089b4; /* Diferente color para ítems pares */
+}
+
+/* Animación de entrada (desvanecimiento) */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Empieza fuera de vista */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Se mueve a su posición final */
+    }
+}
+
+/* Aplicar la animación a cada ítem */
+.fade-in {
+    animation: fadeInUp 1.0s ease forwards; /* Animación suave en 0.5 segundos */
+}
+
+.search-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Ajusta el máximo ancho de la sección */
+    margin: 0 auto;
+}
+
+.filters {
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 1.0rem; /* Espaciado interno */
+    display: flex;
+    flex-wrap: wrap; /* Permite que los filtros se ajusten en varias filas */
+    gap: 1.2rem; /* Espacio entre los filtros */
+    justify-content: space-around; /* Espaciar uniformemente */
+}
+
+.filters select {
+    width: 250px; /* Tamaño consistente para los dropdowns */
+    font-size: 0.8rem;
+    border-radius: 4px; /* Bordes redondeados */
+    background-color: #1a1a2e; /* Fondo blanco */
+    color: #61dafb; /* Texto oscuro */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.filters select:focus {
+    border-color: #007bff; /* Azul de enfoque */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efecto visual */
+    outline: none;
+}
+
+.filters select option {
+    padding: 0.5rem; /* Espaciado interno de las opciones */
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column; /* Colocar los filtros en una columna */
+        align-items: center; /* Centrar los elementos */
+    }
+
+    .filters select {
+        width: 100%; /* Ajustar el ancho al contenedor */
+    }
+}
+
+
+.results-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.solucion-card {
+    border: 2px solid #61dafb;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    max-width: 300px;
+    flex: 1 1 calc(33.333% - 2rem); /* Tres columnas en filas flexibles */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.solucion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.solucion-header {
+    border-bottom: 2px solid #007BFF;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.solucion-nombre {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #61dafb;
+    margin: 0;
+    text-align: center;
+}
+
+.solucion-categoria {
+    font-size: 0.9rem;
+    color: #fdfdfd;
+    text-align: center;
+}
+
+.solucion-body {
+    flex-grow: 1;
+    font-size: 0.95rem;
+    color: #fffefe;
+    margin: 0.2rem 0;
+    text-align: center;
+}
+
+.solucion-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #007BFF;
+    padding-top: 0.5rem;
+}
+
+.solucion-enlace {
+    text-decoration: none;
+    color: #008cba;
+    font-weight: bold;
+    transition: color 0.3s;
+    text-align: center;
+}
+
+.solucion-enlace:hover {
+    color: #0056b3;
+}
+
+.solucion-precio {
+    font-size: 1rem;
+    color: #61dafb;
+    text-align: center;
+}
+
+
+.result-box {
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: transform 0.2s;
+    border-color: #61dafb;
+    border-style: solid;
+}
+
+.result-box:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+/* Estilos para el recuadro flotante */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* opacity: 0.9;
+    filter: alpha(opacity=90);  */
+    border-color: #00a2ff;
+    border-width: 20px;
+    z-index: 1000;
+}
+
+.details-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: #1c1c29;
+    opacity: 0.9;
+    filter: alpha(opacity=50); 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    border-color: #00a2ff;
+    border-width: 20px;
+}
+
+.popup-content {
+    text-align: left;
+}
+
+.popup-content h3 {
+    margin-top: 0;
+}
+
+.popup-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #0056b3;
+}
+
+.scrollable-content {
+    /* Para mantener el scroll solo dentro del contenedor */
+    max-height: auto; /* Altura máxima del contenedor que tendrá scroll */
+    overflow-y: auto;  /* Agrega un scroll vertical */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Personalización de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 14px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    background: #1a1a2e; /* Cambia el color del fondo */
+}
+
+/* Color de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background-color: #00a2ff; /* Color del deslizador */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 3px solid #1a1a2e; /* Añade un borde para un efecto de separación */
+}
+
+/* Efecto al pasar el mouse por encima de la barra */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #61dafb;
+}
+
+/* Estilo normal del enlace */
+.enlace-url {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+/* Estilo cuando el usuario pasa el cursor */
+.enlace-url:hover {
+    color: #61dafb;
+    text-decoration: underline;
+}
+
+/* Estilo del enlace visitado */
+.enlace-url:visited {
+    color: #00a2ff;
+}
+
+/* Estilo cuando el enlace está activo (al hacer clic) */
+.enlace-url:active {
+    color: #61dafb;
+}
+
+

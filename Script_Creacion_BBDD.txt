@@ -1,0 +1,89 @@
+//CREAR BASE DE DATOS con el nombre "IA"//
+
+DB_HOST=localhost          # Dirección del servidor PostgreSQL
+DB_PORT=5432               # Puerto de PostgreSQL (por defecto)
+DB_NAME=IA                 # Nombre de la base de datos
+DB_USER=postgres           # Usuario de PostgreSQL
+DB_PASSWORD=(La contraseña que tengan en PostgreSQL)               # Dejar vacío si no tiene contraseña
+PORT=3000            
+
+
+
+// CREAR BASE DE TABLA //
+
+
+CREATE TABLE Solucions (
+    ID SERIAL PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL,
+    categoria TEXT,
+    descripcion VARCHAR(255),
+    url VARCHAR(255)
+);
+
+
+// CONSULTAR TABLA //
+
+
+SELECT * FROM Solucions
+
+
+// INSERTAR EN LA TABLA //
+
+
+INSERT INTO solucions (nombre, categoria, descripcion, url)
+VALUES
+('ChatGPT', 'Chatbots', 'Chatbot basado en GPT-4 que proporciona respuestas conversacionales de alta calidad.', 'https://chat.openai.com'),
+('Midjourney', 'Generación de Imágenes', 'Herramienta para generar imágenes a partir de texto, popular entre artistas.', 'https://www.midjourney.com'),
+('Leonardo AI', 'Generación de Imágenes', 'IA utilizada para crear gráficos mediante prompts de texto.', 'https://leonardo.ai'),
+('Perplexity AI', 'Asistentes de Búsqueda', 'Asistente de búsqueda basado en IA para responder preguntas de manera eficiente.', 'https://www.perplexity.ai'),
+('Fliki AI', 'Creación de Videos', 'Herramienta de texto a video y voz para crear contenido automáticamente.', 'https://fliki.ai'),
+('ElevenLabs', 'Síntesis de Voz', 'Plataforma de síntesis de voz en tiempo real.', 'https://elevenlabs.io'),
+-- Añadiré más entradas aquí para que completes el total de 100 IA's
+('Synthesia', 'Creación de Videos', 'Herramienta que permite crear videos con avatares digitales personalizados.', 'https://www.synthesia.io'),
+('Jasper', 'Asistentes de Escritura', 'Asistente de escritura potenciado por IA para crear textos de marketing.', 'https://www.jasper.ai'),
+('Replika', 'Chatbots', 'Chatbot conversacional que se adapta al usuario para conversaciones personales.', 'https://replika.ai'),
+('Runway', 'Edición de Video', 'Plataforma de edición de video basada en IA para creadores de contenido.', 'https://runwayml.com'),
+('Descript', 'Edición de Audio y Video', 'Herramienta de edición de audio y video con transcripción automática basada en IA.', 'https://www.descript.com'),
+('DeepL', 'Traducción', 'Traductor de idiomas basado en IA conocido por su alta precisión.', 'https://www.deepl.com'),
+('Copy.ai', 'Asistentes de Escritura', 'Asistente de escritura basado en IA para generar contenido creativo.', 'https://www.copy.ai'),
+('Notion AI', 'Productividad', 'Herramienta de productividad con capacidades de IA para mejorar la organización de proyectos.', 'https://www.notion.so/product/ai'),
+('DALL-E', 'Generación de Imágenes', 'Generador de imágenes a partir de texto basado en el modelo GPT.', 'https://openai.com/dall-e'),
+('Tome AI', 'Presentaciones', 'Generador de presentaciones automáticas a partir de texto.', 'https://tome.app'),
+('Fireflies AI', 'Asistentes de Reuniones', 'Asistente de reuniones que transcribe y resume automáticamente.', 'https://fireflies.ai'),
+('Lumen5', 'Creación de Videos', 'Plataforma que convierte artículos en videos de manera automática.', 'https://lumen5.com'),
+('AI Dungeon', 'Juegos', 'Juego interactivo de aventuras basado en IA.', 'https://play.aidungeon.io'),
+('Beautiful.ai', 'Presentaciones', 'Generador automático de presentaciones visuales.', 'https://www.beautiful.ai'),
+('Pictory', 'Creación de Videos', 'IA para convertir contenido largo en videos cortos y atractivos.', 'https://pictory.ai'),
+('Cohere', 'NLP', 'Plataforma para implementar modelos de lenguaje natural.', 'https://cohere.ai'),
+('CopySmith', 'Asistentes de Escritura', 'Generador de textos creativos para marketing basado en IA.', 'https://www.copysmith.ai'),
+('Soundraw', 'Generación de Música', 'IA para crear música personalizada.', 'https://soundraw.io'),
+('Murphy AI', 'Chatbots', 'Generador de imágenes a partir de preguntas.', 'https://www.projectmurphy.net'),
+('BigML', 'Machine Learning', 'Plataforma para implementar y entrenar modelos de machine learning.', 'https://bigml.com'),
+('Sembly AI', 'Asistentes de Reuniones', 'Transcriptor de reuniones basado en IA con resúmenes automáticos.', 'https://www.sembly.ai'),
+('Wombo', 'Generación de Imágenes', 'Generador de imágenes artísticas a partir de texto.', 'https://www.wombo.art'),
+('Artbreeder', 'Generación de Imágenes', 'Generador de imágenes utilizando técnicas de IA para mezcla de estilos.', 'https://www.artbreeder.com'),
+('ChatSonic', 'Chatbots', 'Asistente conversacional con generación de imágenes incorporada.', 'https://writesonic.com/chat'),
+('Grammarly', 'Asistentes de Escritura', 'Herramienta de corrección y sugerencias gramaticales basadas en IA.', 'https://www.grammarly.com'),
+('Surfer SEO', 'SEO', 'Plataforma que ayuda a optimizar contenido para motores de búsqueda usando IA.', 'https://surferseo.com'),
+('Scalenut', 'Asistentes de Escritura', 'Plataforma para generar contenido SEO optimizado con IA.', 'https://www.scalenut.com'),
+('HyperWrite', 'Asistentes de Escritura', 'Asistente de escritura con generación de textos mejorada.', 'https://www.hyperwriteai.com'),
+('Wordtune', 'Asistentes de Escritura', 'Herramienta que reescribe y mejora textos usando IA.', 'https://www.wordtune.com'),
+('Quillbot', 'Asistentes de Escritura', 'Parafraseador y corrector de textos basado en IA.', 'https://quillbot.com'),
+('Veed.io', 'Edición de Video', 'Plataforma de edición de video con IA y herramientas automáticas.', 'https://www.veed.io'),
+('Podcastle', 'Edición de Audio', 'IA que convierte texto a audio y mejora la calidad de grabaciones.', 'https://podcastle.ai'),
+('Otter.ai', 'Transcripción', 'Transcriptor automático de conversaciones basado en IA.', 'https://otter.ai'),
+('SynthAI', 'Generación de Audio', 'Plataforma para generar voces sintéticas y naturales.', 'https://www.synthai.io'),
+('AI21 Labs', 'NLP', 'Empresa especializada en el desarrollo de modelos avanzados de procesamiento de lenguaje natural.', 'https://www.ai21.com'),
+('Narrato', 'Asistentes de Escritura', 'Plataforma de creación de contenido asistida por IA.', 'https://narrato.io'),
+('Tars', 'Chatbots', 'Plataforma para crear chatbots que automatizan la comunicación empresarial.', 'https://www.hellotars.com'),
+('BotStar', 'Chatbots', 'Creador de chatbots multicanal para automatizar la atención al cliente.', 'https://www.botstar.com'),
+('WriteSonic', 'Asistentes de Escritura', 'Herramienta de generación de contenido basada en IA para marketing.', 'https://writesonic.com'),
+('Brain.fm', 'Generación de Música', 'Plataforma que genera música enfocada en mejorar la productividad y la concentración.', 'https://www.brain.fm'),
+('Designs.ai', 'Diseño Gráfico', 'Herramienta para crear logos, videos y otros diseños automáticamente.', 'https://designs.ai'),
+('Looka', 'Generación de Logos', 'Plataforma para crear logos utilizando IA.', 'https://looka.com'),
+('Chatfuel', 'Chatbots', 'Plataforma para crear chatbots sin necesidad de programación.', 'https://chatfuel.com'),
+('Movio', 'Creación de Videos', 'Generador de videos a partir de texto con avatares basados en IA.', 'https://www.movio.la'),
+('Play.ht', 'Generación de Audio', 'IA para convertir texto a voz con diferentes estilos y acentos.', 'https://www.play.ht'),
+('Vidyo.ai', 'Creación de Videos', 'Generador de clips de video a partir de videos largos.', 'https://vidyo.ai'),
+('Beatoven.ai', 'Generación de Música', 'Plataforma para crear música original utilizando IA.', 'https://www.beatoven.ai');
+

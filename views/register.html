@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Searcher - Registro</title>
+    <link rel="icon" href="/images/logo2.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">  
+        <h2 class="site-title fade-in">A! Searcher</h2>
+        <div>
+            <img src="/images/logo2.png" alt="AI Searcher Logo" class="logo">
+        </div>
+        <ul>
+            <li style="--order: 1;"><a href="/">Inicio</a></li>
+            <li style="--order: 2;"><a href="login.html">Login</a></li>
+            <li style="--order: 3;"><a href="register.html">Registro</a></li>
+            <li style="--order: 4;"><a href="profile.html">Perfil</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content_register">
+        <h1 class="fade-in">Formulario de Registro</h1>
+        <form id="registerForm">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="nombre" placeholder="Nombres" required>
+                <small>Error message</small>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="apellido" placeholder="Apellidos" required>
+                <small>Error message</small>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-calendar-alt"></i>
+                <input type="date" id="fecha" required>
+                <small>Error message</small>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" placeholder="Correo Electrónico" required>
+                <small>Error message</small>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <small>Error message</small>
+            </div>
+            
+            <button type="submit" id="registerBtn">Registrarse</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" class="fade-in">
+        <div class="container">
+            <p class="fade-in">Encuéntranos en nuestras redes sociales:</p>
+            <div class="social-links">
+                <a class="fade-in" href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a> |
+                <a class="fade-in" href="https://www.twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a> |
+                <a class="fade-in" href="https://www.instagram.com" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a> |
+                <a class="fade-in" href="https://www.linkedin.com" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+            <p>&copy; 2024 AI Searcher. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
